@@ -8,7 +8,7 @@ export const siteConfig: SiteConfig = {
   links: {
     twitter: "https://x.com/10Xpraash",
     github:
-      "https://github.com/solana-turbin3/Q3T_Sol_Praash/tree/master/nf-ticket",
-    docs: "https://github.com/solana-turbin3/Q3T_Sol_Praash/tree/master/nf-ticket",
+      "https://github.com/Praashh/NFTickets",
+    docs: "https://github.com/Praashh/NFTickets",
   },
 };

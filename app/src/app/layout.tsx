@@ -42,7 +42,7 @@ export default function RootLayout({
                   <Button asChild>
                     <Link
                       target="_blank"
-                      href={"https://github.com/solana-turbin3/Q3T_Sol_Praash/tree/master/nf-ticket/programs/nf-ticket"}
+                      href={"https://github.com/Praashh/NFTickets/tree/master/programs/namaste-solana"}
                       className={cn(
                         buttonVariants({ variant: "secondary", size: "sm" }),
                         "px-4",
