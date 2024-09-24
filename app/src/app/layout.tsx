@@ -7,6 +7,7 @@ import { marketingConfig } from "@/config/marketing";
 import { cn } from "@/lib/utils";
 import { Button, buttonVariants } from "@/components/ui/button";
 import { MainNav } from "@/components/main-nav";
+import Navbar from "@/components/navbar";
 import { SiteFooter } from "@/components/site-footer";
 import { ThemeProvider } from "@/components/theme-provider";
 import { ThemeModeToggle } from "@/components/theme-mode-toggle";
@@ -37,23 +38,7 @@ export default function RootLayout({
           <div className="flex min-h-screen flex-col">
             <header className="container z-40 bg-background">
               <div className="flex h-20 items-center justify-between py-6">
-                <MainNav items={marketingConfig.mainNav} />
-                <nav className="flex items-center gap-2">
-                  <Button asChild>
-                    <Link
-                      target="_blank"
-                      href={"https://github.com/Praashh/NFTickets/tree/master/programs/namaste-solana"}
-                      className={cn(
-                        buttonVariants({ variant: "secondary", size: "sm" }),
-                        "px-4",
-                      )}
-                    >
-                      Anchor Contract 
-                    </Link>
-                  </Button>
-
-                  <ThemeModeToggle />
-                </nav>
+               <Navbar  />
               </div>
             </header>
 
@@ -63,7 +48,7 @@ export default function RootLayout({
               )}
             ></div>
 
-            <main className={"flex-1 space-y-10 max-w-screen-xl mx-auto"}>
+            <main className="mx-4 overflow-x-hidden">
               {children}
             </main>
 
