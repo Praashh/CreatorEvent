@@ -7,7 +7,7 @@ pub enum MarketplaceError {
     #[msg("Not the right Collection")]
     InvalidCollection,
     #[msg("Choose Another Amount")]
-    InvalidAmount,
+    InvalidAmount
 }
 
 #[error_code]
@@ -19,5 +19,5 @@ pub enum InstrospectionError {
     #[msg("Invalid Amount")]
     InvalidAmount,
     #[msg("Invalid Creator")]
-    InvalidCreator,
+    InvalidCreator
 }
