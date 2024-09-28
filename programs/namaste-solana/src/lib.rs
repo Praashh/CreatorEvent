@@ -288,5 +288,29 @@ pub mod nf_tickets {
         Ok(())
     }
 
-}
+    pub fn withdraw_from_treasury(ctx: Context<WithdrawFromTreasury>, amount: u64) -> Result<()> {
+        let platform_key = ctx.accounts.platform.key();
+        let seeds = &[
+            b"treasury",
+            platform_key.as_ref(),
+            &[ctx.accounts.platform.treasury_bump],
+        ];
+        let signer_seeds = &[&seeds[..]];
+    
+        // Transfer funds from treasury to admin
+        anchor_lang::system_program::transfer(
+            CpiContext::new_with_signer(
+                ctx.accounts.system_program.to_account_info(),
+                anchor_lang::system_program::Transfer {
+                    from: ctx.accounts.treasury.to_account_info(),
+                    to: ctx.accounts.admin.to_account_info(),
+                },
+                signer_seeds,
+            ),
+            amount,
+        )?;
+    
+        Ok(())
+    }
 
+}

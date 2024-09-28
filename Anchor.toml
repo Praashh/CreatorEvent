@@ -4,14 +4,18 @@
 resolution = true
 skip-lint = false
 
-[programs.localnet]
-namaste_solana = "F8hZjtco3YmBv3hhoPTHVXqQM2LD3JgkctQcaNCsw4FJ"
+#[programs.localnet]
+#namaste_solana = "F8hZjtco3YmBv3hhoPTHVXqQM2LD3JgkctQcaNCsw4FJ"
+
+[programs.devnet]
+nf_tickets = "F8hZjtco3YmBv3hhoPTHVXqQM2LD3JgkctQcaNCsw4FJ"
+
 
 [registry]
 url = "https://api.apr.dev"
 
 [provider]
-cluster = "Localnet"
+cluster = "Devnet"
 wallet = "~/.config/solana/id.json"
 
 [scripts]
